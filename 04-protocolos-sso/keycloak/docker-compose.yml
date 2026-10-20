@@ -1,0 +1,20 @@
+# SOMENTE LABORATÓRIO, na sua máquina.
+# start-dev não usa HTTPS e não serve para empresa.
+# A porta fica em 127.0.0.1: ninguém na rede alcança este container.
+# Não troque o bind para 0.0.0.0.
+# A senha inicial admin/admin é a do guia oficial de desenvolvimento.
+# Se for mudar, use um arquivo .env (ele está no .gitignore) e não commite a senha.
+
+name: labiam-keycloak
+
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.8.1
+    container_name: labiam-keycloak
+    command: ["start-dev"]
+    ports:
+      - "127.0.0.1:8080:8080"
+    environment:
+      KC_BOOTSTRAP_ADMIN_USERNAME: ${KC_BOOTSTRAP_ADMIN_USERNAME:-admin}
+      KC_BOOTSTRAP_ADMIN_PASSWORD: ${KC_BOOTSTRAP_ADMIN_PASSWORD:-admin}
+    restart: "no"

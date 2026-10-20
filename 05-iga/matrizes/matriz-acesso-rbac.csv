@@ -1,0 +1,12 @@
+﻿cargo;departamento;sistema;perfil;tipo;birthright;aprovador;observacao
+Analista de RH;RH;ERP LabIAM;Consultar colaboradores;leitura;sim;Gestor de RH;Acesso padrao do cargo. So a propria area.
+Assistente de RH;RH;ERP LabIAM;Consultar colaboradores;leitura;sim;Gestor de RH;Mesmo birthright do analista, sem perfil de escrita.
+Analista Financeiro;Financeiro;ERP LabIAM;Consultar financeiro;leitura;sim;Gestor Financeiro;Nao inclui aprovacao de pagamento.
+Assistente Financeiro;Financeiro;ERP LabIAM;Consultar financeiro;leitura;sim;Gestor Financeiro;Acesso padrao. Sem cadastro de fornecedor.
+Analista Financeiro;Financeiro;ERP LabIAM;Cadastrar fornecedor;escrita;nao;Dono do sistema ERP;Fora do birthright. Exige aprovacao e checagem de SoD.
+Coordenador Financeiro;Financeiro;ERP LabIAM;Aprovar pagamento;aprovacao;nao;Controladoria;Incompativel com cadastrar fornecedor.
+Coordenador Financeiro;Financeiro;ERP LabIAM;Administrador financeiro;administracao;nao;Controladoria;Privilegiado. Revisao trimestral.
+Analista de Suporte;TI;AD LabIAM;Resetar senha da OU Usuarios;operacao;sim;Gestor de TI;Sem permissao na OU de admins nem em Desligados.
+Assistente Comercial;Comercial;CRM LabIAM;Consultar clientes da propria carteira;leitura;sim;Gestor Comercial;Need-to-know: sem a base inteira.
+Analista Comercial;Comercial;CRM LabIAM;Atualizar a propria carteira;escrita;sim;Gestor Comercial;Sem exportar a base.
+Estagiario de Suporte;TI;AD LabIAM;Consultar usuarios;leitura;sim;Gestor de TI;Sem reset de senha e sem grupo privilegiado.

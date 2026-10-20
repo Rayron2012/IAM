@@ -1,0 +1,22 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ListarSoOPrefixoDeRelatorios",
+      "Effect": "Allow",
+      "Action": ["s3:ListBucket"],
+      "Resource": "arn:aws:s3:::labiam-relatorios-exemplo",
+      "Condition": {
+        "StringLike": {
+          "s3:prefix": ["relatorios/*"]
+        }
+      }
+    },
+    {
+      "Sid": "LerSoOsObjetosDessePrefixo",
+      "Effect": "Allow",
+      "Action": ["s3:GetObject"],
+      "Resource": "arn:aws:s3:::labiam-relatorios-exemplo/relatorios/*"
+    }
+  ]
+}

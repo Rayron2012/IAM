@@ -1,0 +1,59 @@
+# Segredos e credenciais. Nunca commite isto.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12
+*.cer
+*.crt
+*.kdbx
+*.jks
+*.keystore
+id_rsa
+id_rsa.*
+id_ed25519
+id_ed25519.*
+*credentials*
+*secret*
+*.tfstate
+*.tfstate.*
+
+# Logs de laboratório. Podem vazar dado se um CSV errado for usado.
+logs/
+*.log
+
+# Discos, imagens e dumps. Não são portfólio e podem conter dado do lab.
+*.vdi
+*.vmdk
+*.vhd
+*.vhdx
+*.ova
+*.iso
+*.bak
+*.dmp
+*.har
+*.db
+*.sqlite
+*.sqlite3
+
+# Exports de diretório e de IdP. Trate como dado sensível mesmo no lab.
+kc-export/
+*export*.json
+usuarios-entra.csv
+achados.csv
+
+# Sistema e editores
+.playwright-mcp/
+.DS_Store
+Thumbs.db
+~$*
+.idea/
+.vscode/
+
+# Exercício opcional de Python
+__pycache__/
+*.pyc
+.venv/
+venv/

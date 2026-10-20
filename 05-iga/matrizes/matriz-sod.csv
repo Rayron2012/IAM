@@ -1,0 +1,5 @@
+﻿perfil_a;sistema_a;perfil_b;sistema_b;risco;descricao;controle_compensatorio
+Cadastrar fornecedor;ERP LabIAM;Aprovar pagamento;ERP LabIAM;alto;A mesma pessoa pode criar um fornecedor ficticio e autorizar o pagamento.;Se a separacao nao couber, revisao mensal das transacoes por alguem que nao executa nenhuma das duas funcoes, com evidencia arquivada.
+Criar usuario;AD LabIAM;Aprovar a propria solicitacao de acesso;IAM LabIAM;alto;Quem cria a conta nao pode ser o unico aprovador do acesso.;Aprovacao do gestor da area e do dono do sistema, em chamados distintos.
+Administrar grupos privilegiados;AD LabIAM;Ser o unico revisor desses acessos;IAM LabIAM;medio;Quem concede privilegio nao deve ser o unico revisor da recertificacao.;Revisor diferente do operador, campanha trimestral, evidencia exportada.
+Resetar senha da OU Usuarios;AD LabIAM;Administrador financeiro;ERP LabIAM;medio;Quem reseta senha de usuario de negocio nao deve acumular o perfil que essa senha libera.;Conta de suporte sem perfil no ERP. Reset registrado em chamado.
