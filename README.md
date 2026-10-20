@@ -12,20 +12,20 @@ A trilha tem dez fases. Na própria trilha, **júnior apto** significa concluir 
 
 ## Andamento
 
-O checklist de cada item fica no README da fase. Aqui o status é da fase inteira: troque `- [ ]` por `- [x]` quando os itens obrigatórios estiverem feitos.
+O checklist de cada item fica no README da fase, com caixas que o GitHub desenha. Nesta tabela, o status é da fase inteira: troque `☐` por `☑` quando os itens obrigatórios estiverem feitos.
 
 | Fase | Tema | Duração sugerida | Status |
 | --- | --- | --- | --- |
-| [1. Fundamentos](01-fundamentos/README.md) | AAA, tipos de identidade, menor privilégio, MFA, JML e glossário | 1–2 semanas | - [ ] |
-| [2. Active Directory e LDAP](02-active-directory/README.md) | Domínio de laboratório, OUs, grupos, GPO, senha e JML | 3–4 semanas | - [ ] |
-| [3. Microsoft Entra ID](03-microsoft-entra-id/README.md) | Usuários, MFA, Acesso Condicional, SSO, revisões e PIM | 3 semanas | - [ ] |
-| [4. Protocolos e SSO](04-protocolos-sso/README.md) | SAML, OAuth 2.0, OIDC, JWT, SCIM e Keycloak | 3 semanas | - [ ] |
-| [5. Governança (IGA)](05-iga/README.md) | JML formal, RBAC, matriz de acesso, SoD e recertificação | 3 semanas | - [ ] |
-| [6. PAM](06-pam/README.md) | Cofre, rotação, sessão, contas de serviço e just-in-time | 2–3 semanas | - [ ] |
-| [7. IAM em nuvem](07-cloud-iam/README.md) | AWS IAM e RBAC do Azure, com menor privilégio | 2 semanas | - [ ] |
-| [8. Automação](08-automacao/README.md) | PowerShell, Microsoft Graph, REST e SQL | 3 semanas | - [ ] |
-| [9. Conformidade](09-compliance/README.md) | ISO 27001, LGPD, NIST, CIS, Zero Trust e ITIL | 2–3 semanas | - [ ] |
-| [10. Entrevista e portfólio](10-entrevista-portfolio/README.md) | Documentação, pitch, perguntas e inglês técnico | 2 semanas, e contínuo | - [ ] |
+| [1. Fundamentos](01-fundamentos/README.md) | AAA, tipos de identidade, menor privilégio, MFA, JML e glossário | 1–2 semanas | ☐ |
+| [2. Active Directory e LDAP](02-active-directory/README.md) | Domínio de laboratório, OUs, grupos, GPO, senha e JML | 3–4 semanas | ☐ |
+| [3. Microsoft Entra ID](03-microsoft-entra-id/README.md) | Usuários, MFA, Acesso Condicional, SSO, revisões e PIM | 3 semanas | ☐ |
+| [4. Protocolos e SSO](04-protocolos-sso/README.md) | SAML, OAuth 2.0, OIDC, JWT, SCIM e Keycloak | 3 semanas | ☐ |
+| [5. Governança (IGA)](05-iga/README.md) | JML formal, RBAC, matriz de acesso, SoD e recertificação | 3 semanas | ☐ |
+| [6. PAM](06-pam/README.md) | Cofre, rotação, sessão, contas de serviço e just-in-time | 2–3 semanas | ☐ |
+| [7. IAM em nuvem](07-cloud-iam/README.md) | AWS IAM e RBAC do Azure, com menor privilégio | 2 semanas | ☐ |
+| [8. Automação](08-automacao/README.md) | PowerShell, Microsoft Graph, REST e SQL | 3 semanas | ☐ |
+| [9. Conformidade](09-compliance/README.md) | ISO 27001, LGPD, NIST, CIS, Zero Trust e ITIL | 2–3 semanas | ☐ |
+| [10. Entrevista e portfólio](10-entrevista-portfolio/README.md) | Documentação, pitch, perguntas e inglês técnico | 2 semanas, e contínuo | ☐ |
 
 Itens opcionais não entram nessa conta. Eles estão marcados dentro de cada fase.
 
