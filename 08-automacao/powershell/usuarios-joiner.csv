@@ -1,0 +1,11 @@
+﻿SamAccountName;Nome;Sobrenome;Departamento;Cargo;OU;Grupos;Matricula;Chamado
+ana.teste;Ana;Teste;RH;Analista de RH;OU=RH;GG-RH-Analistas;1001;LAB-1001
+bruno.exemplo;Bruno;Exemplo;Financeiro;Analista Financeiro;OU=Financeiro;GG-Financeiro;1002;LAB-1002
+carla.demo;Carla;Demonstracao;TI;Analista de Suporte;OU=TI;GG-TI-Suporte;1003;LAB-1003
+diego.ficticio;Diego;Ficticio;Financeiro;Coordenador Financeiro;OU=Financeiro;GG-Financeiro;1004;LAB-1004
+elena.modelo;Elena;Modelo;Comercial;Assistente Comercial;OU=Comercial;GG-COM-Vendas;1005;LAB-1005
+fabio.lab;Fabio;Laboratorio;RH;Assistente de RH;OU=RH;GG-RH-Analistas;1006;LAB-1006
+gabriela.exemplo;Gabriela;Exemplo;TI;Analista de Suporte;OU=TI;GG-TI-Suporte;1007;LAB-1007
+heitor.teste;Heitor;Teste;Financeiro;Assistente Financeiro;OU=Financeiro;GG-Financeiro;1008;LAB-1008
+iris.modelo;Iris;Modelo;Comercial;Analista Comercial;OU=Comercial;GG-COM-Vendas;1009;LAB-1009
+joao.lab;Joao;Lab;TI;Estagiario de Suporte;OU=TI;GG-TI-Suporte;1010;LAB-1010
