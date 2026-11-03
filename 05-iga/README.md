@@ -1,10 +1,10 @@
 # Fase 5 — Governança de acessos (IGA)
 
-- [ ] Fase não concluída
+- [ ] Fase não concluída (`f5`)
 
 Duração sugerida na trilha: **3 semanas**. Itens obrigatórios: **7**. Opcionais: **0**.
 
-Esta pasta começa sem evidência. O checklist abaixo sai da trilha de estudos e fica desmarcado até você fazer o item. Laboratório não é produção.
+Esta pasta começa sem evidência. O checklist abaixo sai da trilha de estudos e fica desmarcado até você fazer o item. Laboratório não é produção. O id entre crases na caixa é o mesmo de `curriculum/progress.yml` e de `docs/trilha-iam.html`.
 
 ## Objetivo
 
@@ -16,7 +16,7 @@ As planilhas de exemplo estão em [matrizes/README.md](matrizes/README.md). A de
 
 ### Processo JML formal e RH como fonte da verdade
 
-- [ ] Obrigatório.
+- [ ] Obrigatório. `f5-jml-proc`
 
 **Conceito.** Numa empresa madura, o sistema de RH (ex.: SAP SuccessFactors, Senior, TOTVS) é a **fonte autoritativa**: admissão, troca de cargo e desligamento geram eventos que a ferramenta de IGA transforma em criação, alteração e remoção de acessos. Acesso fora do padrão do cargo passa por **solicitação + aprovação** (gestor e dono do sistema) e tudo gera evidência.
 
@@ -35,7 +35,7 @@ Escreva um procedimento (POP) de 1 página: “Admissão de colaborador”, com 
 
 ### RBAC, ABAC e papéis de negócio
 
-- [ ] Obrigatório.
+- [ ] Obrigatório. `f5-rbac`
 
 **Conceito.** **RBAC**: o acesso é dado ao papel (cargo/função), e a pessoa herda pelo papel. **ABAC**: a decisão usa atributos (departamento, local, horário, classificação do dado). **Role mining** é descobrir papéis analisando quem tem o quê. Excesso de papéis (role explosion) é um problema comum.
 
@@ -54,7 +54,7 @@ Defina 4 papéis de negócio (Analista Financeiro, Aprovador Financeiro, Analist
 
 ### Prática: matriz de acesso no Excel
 
-- [ ] Obrigatório. Tem prática de laboratório.
+- [ ] Obrigatório. Tem prática de laboratório. `f5-matriz`
 
 **Conceito.** A **matriz de acesso** (ou matriz de perfis) cruza cargos/papéis com sistemas e perfis: é o documento que diz “quem deve ter o quê”. Ela é a base da admissão automática, da revisão de acessos e da auditoria.
 
@@ -73,7 +73,7 @@ Planilha com linhas = cargos (6) e colunas = sistemas/perfis (AD grupos, ERP, CR
 
 ### Prática: matriz de SoD e detecção de conflitos
 
-- [ ] Obrigatório. Tem prática de laboratório.
+- [ ] Obrigatório. Tem prática de laboratório. `f5-sod`
 
 **Conceito.** A **matriz de SoD** lista os pares de perfis incompatíveis e o risco de cada par. Na detecção você cruza a matriz com “quem tem o quê” e acha as violações. Quando o conflito é inevitável (empresa pequena), aplica-se um **controle compensatório** (ex.: revisão mensal das transações).
 
@@ -91,7 +91,7 @@ Aba 1: matriz quadrada perfil x perfil com “Conflito Alto/Médio”. Aba 2: li
 
 ### Campanhas de recertificação (revisão de acessos)
 
-- [ ] Obrigatório. Tem prática de laboratório.
+- [ ] Obrigatório. Tem prática de laboratório. `f5-recert`
 
 **Conceito.** A campanha define **escopo** (ex.: acessos ao ERP financeiro), **revisor** (gestor ou dono do sistema), **prazo**, **regra para não respondidos** (revogar ou escalar) e **evidência** final. Frequência típica: trimestral para acessos críticos e privilegiados, semestral ou anual para o resto. O IAM acompanha, cobra e executa as revogações.
 
@@ -109,7 +109,7 @@ Planilha de campanha: 20 linhas (usuário, acesso, gestor, decisão Manter/Revog
 
 ### Reconciliação: contas órfãs e desligados ativos
 
-- [ ] Obrigatório. Tem prática de laboratório.
+- [ ] Obrigatório. Tem prática de laboratório. `f5-orfas`
 
 **Conceito.** **Reconciliação** é comparar o que existe nos sistemas com a fonte da verdade (RH). Achados clássicos: **conta órfã** (sem dono no RH), **desligado com conta ativa**, **conta sem login há 90+ dias** e **acesso fora da matriz**. Ferramentas de IGA fazem isso automaticamente; você vai fazer com SQL/Excel.
 
@@ -127,7 +127,7 @@ Exporte os usuários do lab (`Get-ADUser -Filter * -Properties LastLogonDate,Ena
 
 ### Treinamentos gratuitos SailPoint (conceitos de IGA)
 
-- [ ] Obrigatório.
+- [ ] Obrigatório. `f5-sailpoint`
 
 **Conceito.** SailPoint (IdentityIQ e Identity Security Cloud, antigo IdentityNow) e Saviynt são as ferramentas de IGA mais citadas. Conceitos que se repetem: fontes (sources), contas, entitlements, access profiles, roles, certificações, políticas de SoD e workflows. Os produtos são pagos; os treinamentos introdutórios são gratuitos.
 

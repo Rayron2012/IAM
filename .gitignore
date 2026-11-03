@@ -41,8 +41,47 @@ logs/
 # Exports de diretório e de IdP. Trate como dado sensível mesmo no lab.
 kc-export/
 *export*.json
+*export*.csv
 usuarios-entra.csv
 achados.csv
+achados*.csv
+contas.csv
+rh.csv
+*ad-export*
+*entra-export*
+*ldap-dump*
+*sign-in*
+*signin-log*
+*audit-log*
+
+# Laboratório real e multi-cloud. Ficam fora deste repositório público.
+maximo/
+**/maximo/
+*break-glass*
+*breakglass*
+*tenant-id*
+*tenantid*
+*object-id*
+*objectid*
+*.upn
+tokens/
+*.token
+*.msalcache
+msal_token_cache*
+appsettings.json
+appsettings.*.json
+
+# Credenciais e sessões de nuvem na máquina local.
+.aws/
+.azure/
+.kube/
+kubeconfig
+*.ovpn
+*.ppk
+*.rdp
+id_ecdsa
+id_ecdsa.*
+*.kdb
 
 # Sistema e editores
 .playwright-mcp/

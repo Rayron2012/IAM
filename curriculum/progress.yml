@@ -1,0 +1,431 @@
+# Fonte da barra de progresso publicada no README.
+#
+# A barra júnior conta só os itens obrigatórios das fases f1 a f5.
+# Fases f6 a f10 são diferenciais e não entram nessa porcentagem.
+# Itens opcionais têm peso 0.
+#
+# Para concluir um item:
+#   1. Troque done para true neste arquivo (não altere id, titulo, peso nem a ordem).
+#   2. Rode: python3 scripts/atualizar-progresso.py
+# O script atualiza a barra do README, os selos em docs/ e a caixa no README da fase.
+# A trilha interativa guarda outro progresso, só no navegador. Marque o mesmo id lá se quiser.
+#
+# Ids e títulos têm de continuar iguais aos de docs/trilha-iam.html.
+# Peso padrão do obrigatório: 1. Só aumente o peso se aquele item passar a valer mais
+# na meta júnior de propósito. Opcional permanece com peso 0.
+# Evidência de lab real (tenant, UPN, OID, segredo, log) não entra neste arquivo.
+
+versao: 1
+meta_junior:
+  fases: [f1, f2, f3, f4, f5]
+fases:
+  - id: f1
+    numero: 1
+    titulo: "Fundamentos de identidade"
+    pasta: 01-fundamentos
+    duracao: "1–2 semanas"
+    trilha: junior
+    itens:
+      - id: f1-aaa
+        titulo: "AAA: autenticação, autorização e auditoria"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f1-ident
+        titulo: "Identidade x conta x tipos de identidade"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f1-priv
+        titulo: "Menor privilégio, need-to-know e segregação de funções"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f1-auth
+        titulo: "Fatores de autenticação, senhas e MFA"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f1-ciclo
+        titulo: "Ciclo de vida de identidade (JML) em visão geral"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f1-glossario
+        titulo: "Glossário do mercado (com termos em inglês)"
+        obrigatorio: true
+        peso: 1
+        done: false
+  - id: f2
+    numero: 2
+    titulo: "Active Directory e LDAP no seu laboratório"
+    pasta: 02-active-directory
+    duracao: "3–4 semanas"
+    trilha: junior
+    itens:
+      - id: f2-lab
+        titulo: "Montar o lab: VirtualBox + Windows Server + domínio"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f2-ou
+        titulo: "Unidades Organizacionais (OUs) e delegação"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f2-grupos
+        titulo: "Grupos: segurança x distribuição, escopos e AGDLP"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f2-gpo
+        titulo: "GPOs (Diretivas de Grupo)"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f2-senha
+        titulo: "Política de senha, bloqueio e FGPP"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f2-jml
+        titulo: "JML completo no AD (a sua maior lacuna, agora na prática)"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f2-ldap
+        titulo: "LDAP na prática: DN, atributos e consultas"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f2-kerb
+        titulo: "Kerberos e NTLM (o que acontece no logon)"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f2-audit
+        titulo: "Auditoria de identidade no AD (eventos que o IAM acompanha)"
+        obrigatorio: true
+        peso: 1
+        done: false
+  - id: f3
+    numero: 3
+    titulo: "Microsoft Entra ID e identidade em nuvem"
+    pasta: 03-microsoft-entra-id
+    duracao: "3 semanas"
+    trilha: junior
+    itens:
+      - id: f3-tenant
+        titulo: "Conseguir um tenant de estudo (sem usar o da empresa)"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f3-users
+        titulo: "Usuários, grupos e funções administrativas no Entra"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f3-mfa
+        titulo: "MFA e Padrões de Segurança"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f3-ca
+        titulo: "Acesso Condicional (com avaliação P1/P2)"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f3-sso
+        titulo: "SSO de aplicativo empresarial (SAML) no Entra"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f3-reviews
+        titulo: "Revisões de acesso (recertificação) no Entra"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f3-pim
+        titulo: "PIM: acesso privilegiado just-in-time"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f3-hybrid
+        titulo: "Identidade híbrida: AD + Entra (conceito)"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f3-logs
+        titulo: "Logs de entrada e auditoria no Entra"
+        obrigatorio: true
+        peso: 1
+        done: false
+  - id: f4
+    numero: 4
+    titulo: "Protocolos de autenticação e SSO"
+    pasta: 04-protocolos-sso
+    duracao: "3 semanas"
+    trilha: junior
+    itens:
+      - id: f4-saml
+        titulo: "SAML 2.0"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f4-oauth
+        titulo: "OAuth 2.0 (autorização delegada)"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f4-oidc
+        titulo: "OpenID Connect (OIDC)"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f4-jwt
+        titulo: "JWT: o que tem dentro de um token"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f4-scim
+        titulo: "SCIM: provisionamento automático entre sistemas"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f4-keycloak
+        titulo: "Lab Keycloak: instalar, realm, usuários, clients"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f4-keycloak-saml
+        titulo: "Lab Keycloak: federação SAML e conexão com o AD (LDAP)"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f4-federation
+        titulo: "Troubleshooting de SSO (o dia a dia do suporte IAM)"
+        obrigatorio: true
+        peso: 1
+        done: false
+  - id: f5
+    numero: 5
+    titulo: "Governança de acessos (IGA)"
+    pasta: 05-iga
+    duracao: "3 semanas"
+    trilha: junior
+    itens:
+      - id: f5-jml-proc
+        titulo: "Processo JML formal e RH como fonte da verdade"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f5-rbac
+        titulo: "RBAC, ABAC e papéis de negócio"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f5-matriz
+        titulo: "Prática: matriz de acesso no Excel"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f5-sod
+        titulo: "Prática: matriz de SoD e detecção de conflitos"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f5-recert
+        titulo: "Campanhas de recertificação (revisão de acessos)"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f5-orfas
+        titulo: "Reconciliação: contas órfãs e desligados ativos"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f5-sailpoint
+        titulo: "Treinamentos gratuitos SailPoint (conceitos de IGA)"
+        obrigatorio: true
+        peso: 1
+        done: false
+  - id: f6
+    numero: 6
+    titulo: "Acesso privilegiado (PAM)"
+    pasta: 06-pam
+    duracao: "2–3 semanas"
+    trilha: diferencial
+    itens:
+      - id: f6-conceitos
+        titulo: "Conceitos de PAM: cofre, rotação, sessão, JIT"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f6-contas-servico
+        titulo: "Contas de serviço, LAPS e conta de emergência"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f6-cyberark
+        titulo: "Treinamentos gratuitos CyberArk"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f6-lab-teleport
+        titulo: "Lab PAM open source: Teleport"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f6-mercado
+        titulo: "Ferramentas de PAM do mercado BR: Segura (Senhasegura), BeyondTrust, Delinea"
+        obrigatorio: true
+        peso: 1
+        done: false
+  - id: f7
+    numero: 7
+    titulo: "IAM em nuvem (AWS e Azure)"
+    pasta: 07-cloud-iam
+    duracao: "2 semanas"
+    trilha: diferencial
+    itens:
+      - id: f7-aws-conta
+        titulo: "Conta AWS segura e sem custo"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f7-aws-iam
+        titulo: "Usuários, grupos e políticas (JSON)"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f7-aws-roles
+        titulo: "Roles (funções) e acesso temporário"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f7-aws-sim
+        titulo: "Simulador de políticas e Access Analyzer"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f7-identity-center
+        titulo: "IAM Identity Center (SSO para várias contas AWS)"
+        obrigatorio: false
+        peso: 0
+        done: false
+      - id: f7-azure-rbac
+        titulo: "RBAC do Azure (escopos e funções)"
+        obrigatorio: false
+        peso: 0
+        done: false
+  - id: f8
+    numero: 8
+    titulo: "Automação: PowerShell, APIs, SQL e IA"
+    pasta: 08-automacao
+    duracao: "3 semanas"
+    trilha: diferencial
+    itens:
+      - id: f8-ps-basics
+        titulo: "PowerShell do zero"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f8-ps-ad
+        titulo: "JML em massa no AD a partir de CSV"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f8-graph
+        titulo: "Microsoft Graph PowerShell (Entra ID)"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f8-rest
+        titulo: "APIs REST na prática (Keycloak e Graph)"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f8-sql
+        titulo: "SQL para auditoria de permissões"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f8-python
+        titulo: "Python para cruzar listas (opcional)"
+        obrigatorio: false
+        peso: 0
+        done: false
+      - id: f8-ia
+        titulo: "IA como assistente de automação (com segurança)"
+        obrigatorio: true
+        peso: 1
+        done: false
+  - id: f9
+    numero: 9
+    titulo: "Normas, compliance e processo"
+    pasta: 09-compliance
+    duracao: "2–3 semanas"
+    trilha: diferencial
+    itens:
+      - id: f9-iso
+        titulo: "ISO/IEC 27001 e 27002: controles de acesso"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f9-lgpd
+        titulo: "LGPD aplicada a acessos"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f9-sox
+        titulo: "SOX, ITGC e evidência de auditoria"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f9-nist-cis
+        titulo: "NIST CSF 2.0 e CIS Controls v8"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f9-zt
+        titulo: "Zero Trust"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f9-itil
+        titulo: "ITIL: requisição, incidente, mudança e SLA"
+        obrigatorio: true
+        peso: 1
+        done: false
+  - id: f10
+    numero: 10
+    titulo: "Entrevista, portfólio e certificações"
+    pasta: 10-entrevista-portfolio
+    duracao: "2 semanas (e contínuo)"
+    trilha: diferencial
+    itens:
+      - id: f10-github
+        titulo: "Portfólio de labs no GitHub"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f10-pitch
+        titulo: "Como contar a sua experiência (com honestidade)"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f10-qa
+        titulo: "Perguntas técnicas comuns (treino)"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f10-ingles
+        titulo: "Inglês técnico mínimo para IAM"
+        obrigatorio: true
+        peso: 1
+        done: false
+      - id: f10-certs
+        titulo: "Certificações (opcional, só se fizer sentido no seu bolso)"
+        obrigatorio: false
+        peso: 0
+        done: false

@@ -1,10 +1,10 @@
 # Fase 4 — Protocolos e SSO
 
-- [ ] Fase não concluída
+- [ ] Fase não concluída (`f4`)
 
 Duração sugerida na trilha: **3 semanas**. Itens obrigatórios: **8**. Opcionais: **0**.
 
-Esta pasta começa sem evidência. O checklist abaixo sai da trilha de estudos e fica desmarcado até você fazer o item. Laboratório não é produção.
+Esta pasta começa sem evidência. O checklist abaixo sai da trilha de estudos e fica desmarcado até você fazer o item. Laboratório não é produção. O id entre crases na caixa é o mesmo de `curriculum/progress.yml` e de `docs/trilha-iam.html`.
 
 ## Objetivo
 
@@ -16,7 +16,7 @@ O compose local, preso em `127.0.0.1`, está em [keycloak/README.md](keycloak/RE
 
 ### SAML 2.0
 
-- [ ] Obrigatório.
+- [ ] Obrigatório. `f4-saml`
 
 **Conceito.** Padrão em XML para SSO web corporativo. O usuário tenta entrar no app (SP), é redirecionado ao IdP, autentica e volta com uma **asserção SAML assinada** com quem ele é (NameID) e atributos (claims). Elementos-chave: Entity ID, ACS URL, certificado de assinatura e metadados.
 
@@ -35,7 +35,7 @@ Capture uma asserção SAML no SAML-tracer e identifique: Issuer, NameID, Condit
 
 ### OAuth 2.0 (autorização delegada)
 
-- [ ] Obrigatório.
+- [ ] Obrigatório. `f4-oauth`
 
 **Conceito.** OAuth 2.0 **não é autenticação**: é um app obtendo um **access token** para acessar uma API em nome do usuário (ou em nome próprio). Fluxos principais: **Authorization Code + PKCE** (apps com usuário) e **Client Credentials** (máquina com máquina). Escopos (scopes) limitam o que o token pode fazer.
 
@@ -55,7 +55,7 @@ No Keycloak, crie um client `api-relatorios` com *Client authentication* ligado 
 
 ### OpenID Connect (OIDC)
 
-- [ ] Obrigatório. Tem prática de laboratório.
+- [ ] Obrigatório. Tem prática de laboratório. `f4-oidc`
 
 **Conceito.** OIDC é uma camada de **autenticação** em cima do OAuth 2.0. Além do access token, o app recebe um **ID Token** (JWT) dizendo quem é o usuário. É o padrão moderno para login em apps web e mobile (o “Entrar com Google/Microsoft”).
 
@@ -75,7 +75,7 @@ Faça login no keycloak.org/app com o seu realm e, depois, pelo OIDC Debugger; c
 
 ### JWT: o que tem dentro de um token
 
-- [ ] Obrigatório. Tem prática de laboratório.
+- [ ] Obrigatório. Tem prática de laboratório. `f4-jwt`
 
 **Conceito.** JWT é um token em 3 partes (cabeçalho.dados.assinatura) codificadas em Base64URL. Claims comuns: `iss` (emissor), `sub` (usuário), `aud` (para quem é), `exp` (expiração), `scope`/`roles`. Ele é **assinado, não criptografado**: qualquer um lê o conteúdo, então nada sensível vai nele.
 
@@ -94,7 +94,7 @@ Decodifique 2 tokens do seu Keycloak no jwt.io e anote o que significa cada clai
 
 ### SCIM: provisionamento automático entre sistemas
 
-- [ ] Obrigatório.
+- [ ] Obrigatório. `f4-scim`
 
 **Conceito.** SCIM é uma API REST padrão (JSON) para **criar, atualizar e desativar usuários e grupos** em apps SaaS automaticamente a partir do IdP. É assim que o JML “se espalha” para Slack, Zoom, Salesforce etc. sem ninguém criar conta na mão.
 
@@ -114,7 +114,7 @@ Escreva à mão o JSON de um POST `/Users` e de um PATCH com `"active": false` (
 
 ### Lab Keycloak: instalar, realm, usuários, clients
 
-- [ ] Obrigatório. Tem prática de laboratório.
+- [ ] Obrigatório. Tem prática de laboratório. `f4-keycloak`
 
 **Conceito.** Keycloak é o IdP open source mais usado. Conceitos: realm (tenant), client (app), user, group, role (realm role e client role), identity provider (federação) e user federation (conectar ao AD/LDAP).
 
@@ -136,7 +136,7 @@ Passo a passo de instalação na trilha interativa (`docs/trilha-iam.html`), gui
 
 ### Lab Keycloak: federação SAML e conexão com o AD (LDAP)
 
-- [ ] Obrigatório. Tem prática de laboratório.
+- [ ] Obrigatório. Tem prática de laboratório. `f4-keycloak-saml`
 
 **Conceito.** Federação é confiar na identidade emitida por outro IdP (empresa parceira, Entra, ADFS). No Keycloak isso é um **Identity Provider**. Já a **User Federation (LDAP)** faz o Keycloak ler os usuários do seu AD, um cenário muito comum.
 
@@ -155,7 +155,7 @@ Login no realm `labiam` usando a conta do realm `parceiro` via SAML, com a asser
 
 ### Troubleshooting de SSO (o dia a dia do suporte IAM)
 
-- [ ] Obrigatório. Tem prática de laboratório.
+- [ ] Obrigatório. Tem prática de laboratório. `f4-federation`
 
 **Conceito.** Os chamados de SSO quase sempre caem em poucas causas: **redirect/ACS URL errado**, **certificado expirado ou trocado**, **relógio fora de sincronia** (asserção “ainda não válida”/expirada), **claim/NameID diferente** do que o app espera, usuário **não atribuído** ao app, ou bloqueio de **Acesso Condicional**.
 

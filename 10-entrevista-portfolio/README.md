@@ -1,10 +1,10 @@
 # Fase 10 — Entrevista e portfólio
 
-- [ ] Fase não concluída
+- [ ] Fase não concluída (`f10`)
 
 Duração sugerida na trilha: **2 semanas (e contínuo)**. Itens obrigatórios: **4**. Opcionais: **1**.
 
-Esta pasta começa sem evidência. O checklist abaixo sai da trilha de estudos e fica desmarcado até você fazer o item. Laboratório não é produção.
+Esta pasta começa sem evidência. O checklist abaixo sai da trilha de estudos e fica desmarcado até você fazer o item. Laboratório não é produção. O id entre crases na caixa é o mesmo de `curriculum/progress.yml` e de `docs/trilha-iam.html`.
 
 ## Objetivo
 
@@ -16,7 +16,7 @@ Rascunhos vazios: [pitch.md](pitch.md) e [perguntas.md](perguntas.md). Preencha 
 
 ### Portfólio de labs no GitHub
 
-- [ ] Obrigatório. Tem prática de laboratório.
+- [ ] Obrigatório. Tem prática de laboratório. `f10-github`
 
 **Conceito.** Seus labs documentados provam o que você não fez no trabalho, sem precisar mentir. Recrutador técnico abre o GitHub; o ATS lê as palavras-chave do currículo. Os dois se complementam.
 
@@ -37,7 +37,7 @@ Passo a passo de instalação na trilha interativa (`docs/trilha-iam.html`), gui
 
 ### Como contar a sua experiência (com honestidade)
 
-- [ ] Obrigatório.
+- [ ] Obrigatório. `f10-pitch`
 
 **Conceito.** Sua história é forte: SOC N2 com bloqueio de contas por playbook no Sentinel/XDR, movimentação de grupos no AD/Entra em funções anteriores, chamados em GLPI/OTRS/Jira, e bagagem em dados e auditoria (SQL, Excel, Power BI). O que falta (admissão, desligamento, IGA, PAM) você diz que **praticou em laboratório** e mostra o GitHub. Nunca diga que fez em produção o que fez no lab.
 
@@ -55,7 +55,7 @@ Pitch escrito: “Hoje sou SOC N2… Na prática já fiz… No meu laboratório 
 
 ### Perguntas técnicas comuns (treino)
 
-- [ ] Obrigatório.
+- [ ] Obrigatório. `f10-qa`
 
 **Conceito.** Perguntas que mais caem: JML; o que fazer num desligamento urgente; RBAC x ABAC; SoD; SAML x OAuth x OIDC; como funciona o MFA; o que é PAM e rotação; como você faria uma revisão de acessos; como investigaria “usuário não consegue acessar o app”; menor privilégio; conta de serviço; Zero Trust.
 
@@ -73,7 +73,7 @@ Documento com 20 perguntas e as suas respostas, revisado depois de cada entrevis
 
 ### Inglês técnico mínimo para IAM
 
-- [ ] Obrigatório.
+- [ ] Obrigatório. `f10-ingles`
 
 **Conceito.** Você não precisa conversar para começar no júnior, mas vai ler interface, documentação e logs em inglês. Foque em leitura: verbos de interface (grant, revoke, assign, enable, disable, approve, deny), termos de IAM (entitlement, provisioning, attestation) e mensagens de erro. Algumas vagas pedem conversação; isso é um objetivo de médio prazo.
 
@@ -91,7 +91,7 @@ Glossário com 60 termos e você lendo uma página da documentação do Keycloak
 
 ### Certificações (opcional, só se fizer sentido no seu bolso)
 
-- [ ] Opcional. Não conta para o marco da fase.
+- [ ] Opcional. Não conta para o marco da fase. `f10-certs`
 
 **Conceito.** Elas não são obrigatórias para o júnior, mas aparecem como diferencial: **SC-900** (fundamentos de segurança e identidade Microsoft, a mais barata e fácil), **AZ-900** (fundamentos do Azure), **SC-300** (Administrador de Identidade e Acesso, a mais alinhada a IAM, mais difícil) e **Security+** (CompTIA, cara). Os **estudos** no Microsoft Learn são gratuitos; as **provas são pagas** (o preço varia por país; confira no site antes).
 
