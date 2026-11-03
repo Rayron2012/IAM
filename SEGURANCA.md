@@ -9,16 +9,25 @@ Este portfólio pode ser lido por qualquer pessoa: recrutador, colega ou desconh
 - Dado real de empresa: nome de servidor, IP interno, print de console corporativo, playbook, número de chamado real, log de SIEM ou de qualquer ferramenta de trabalho.
 - Dado pessoal: CPF, RG, nome real de colega, cliente ou usuário, e-mail pessoal ou corporativo, telefone, matrícula real e foto de crachá.
 - Planilha de RH, dump de Active Directory, export de usuários do Entra e backup de banco, mesmo que seja “só para testar o script”.
+- Identificador de ambiente real: ID de tenant, ID de assinatura, ID de objeto (OID), UPN, e-mail real, nome de conta break-glass, nome de servidor, IP interno e número de chamado que não seja fictício.
 
 Os CSVs, o SQL e as políticas deste repositório usam a empresa fictícia **LabIAM** e pessoas fictícias (`ana.teste`, `bruno.exemplo` e outras). Não troque esses exemplos por dados verdadeiros.
+
+## Laboratório real não entra aqui
+
+Estudo feito em tenant, conta ou diretório reais fica em local privado. Isso inclui laboratório multi-cloud e qualquer artefato de ambiente Maximo: conta, UPN, OID, segredo, break-glass, log de entrada e log de auditoria.
+
+Este repositório público só publica a empresa fictícia **LabIAM** (`labiam.local`, `usuario.lab@labiam.local`, realm `labiam`, chamado `LAB-0000`).
+
+Se uma evidência do estudo pessoal precisar ir para o GitHub, reescreva os identificadores como placeholder (`TENANT-ESTUDO`, `usuario.lab@labiam.local`, `OID-EXEMPLO`) antes do commit. O arquivo original fica fora do Git. `curriculum/progress.yml` guarda só `done: true` ou `done: false`. Não cole evidência nele.
 
 ## Prints e evidências
 
 Antes de salvar uma imagem em `laboratorio/evidencias/`:
 
-- Cubra nome de tenant, ID de assinatura, e-mail, nome de pessoa e qualquer identificador que não seja do laboratório.
-- Prefira o tenant de estudo, o domínio `labiam.local` e usuários fictícios.
-- Se o print mostrar senha temporária, client secret ou access key, não publique. Gere outro print com o valor oculto.
+- Cubra nome de tenant, ID de assinatura, ID de objeto, UPN, e-mail, nome de pessoa e qualquer identificador que não seja do laboratório.
+- Prefira o tenant de estudo, o domínio `labiam.local` e usuários fictícios. No texto publicado, troque o que restar por placeholder.
+- Se o print mostrar senha temporária, client secret, access key, conta break-glass ou log de um ambiente real, não publique. Gere outro print com o valor oculto, ou descreva o passo sem imagem.
 
 ## Laboratório isolado
 

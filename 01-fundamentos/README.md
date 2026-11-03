@@ -1,10 +1,10 @@
 # Fase 1 — Fundamentos de identidade
 
-- [ ] Fase não concluída
+- [ ] Fase não concluída (`f1`)
 
 Duração sugerida na trilha: **1–2 semanas**. Itens obrigatórios: **6**. Opcionais: **0**.
 
-Esta pasta começa sem evidência. O checklist abaixo sai da trilha de estudos e fica desmarcado até você fazer o item. Laboratório não é produção.
+Esta pasta começa sem evidência. O checklist abaixo sai da trilha de estudos e fica desmarcado até você fazer o item. Laboratório não é produção. O id entre crases na caixa é o mesmo de `curriculum/progress.yml` e de `docs/trilha-iam.html`.
 
 ## Objetivo
 
@@ -16,7 +16,7 @@ O glossário para preencher está em [glossario.md](glossario.md). A meta desta 
 
 ### AAA: autenticação, autorização e auditoria
 
-- [ ] Obrigatório.
+- [ ] Obrigatório. `f1-aaa`
 
 **Conceito.** Autenticação é provar quem você é (senha, MFA). Autorização é decidir o que você pode fazer (permissões, grupos). Auditoria (accounting) é registrar o que foi feito (logs). Muitos materiais incluem antes a **Identificação** (dizer quem você é: o login), formando “IAAA”.
 
@@ -35,7 +35,7 @@ Monte uma tabela com 3 colunas (Identificação/Autenticação, Autorização, A
 
 ### Identidade x conta x tipos de identidade
 
-- [ ] Obrigatório.
+- [ ] Obrigatório. `f1-ident`
 
 **Conceito.** Uma **identidade** é a pessoa (ou máquina); uma **conta** é o registro dela num sistema. Uma pessoa pode ter várias contas (AD, SAP, e-mail). Os tipos mais cobrados são: identidade humana (funcionário, terceiro), **identidade de serviço/máquina** (contas de serviço, service principals, managed identities) e **identidade privilegiada** (admins).
 
@@ -54,7 +54,7 @@ Desenhe (papel ou draw.io) a identidade “Ana” com 4 contas em sistemas difer
 
 ### Menor privilégio, need-to-know e segregação de funções
 
-- [ ] Obrigatório.
+- [ ] Obrigatório. `f1-priv`
 
 **Conceito.** **Menor privilégio**: cada um recebe só o acesso necessário para a função, pelo tempo necessário. **Need-to-know**: só acessa a informação quem precisa dela para trabalhar. **SoD (segregação de funções)**: a mesma pessoa não pode ter duas permissões que juntas permitem fraude (ex.: cadastrar fornecedor e aprovar pagamento).
 
@@ -73,7 +73,7 @@ Liste 5 pares de permissões que configurariam conflito de SoD numa empresa (fin
 
 ### Fatores de autenticação, senhas e MFA
 
-- [ ] Obrigatório.
+- [ ] Obrigatório. `f1-auth`
 
 **Conceito.** Fatores: algo que você **sabe** (senha), **tem** (celular, token, chave FIDO2) e **é** (biometria). MFA combina fatores de categorias diferentes. Métodos resistentes a phishing (FIDO2/passkeys, Windows Hello) são mais fortes que SMS. O NIST 800-63B é a referência mundial para senhas e autenticadores.
 
@@ -93,7 +93,7 @@ Classifique 8 métodos (senha, PIN, SMS, app autenticador com número, FIDO2, bi
 
 ### Ciclo de vida de identidade (JML) em visão geral
 
-- [ ] Obrigatório.
+- [ ] Obrigatório. `f1-ciclo`
 
 **Conceito.** **Joiner** (admissão: criar conta e dar o acesso do cargo), **Mover** (movimentação: tirar acessos antigos e dar novos) e **Leaver** (desligamento: bloquear e remover tudo, no prazo). Em empresa madura, o gatilho vem do **RH (fonte da verdade)** e o processo tem aprovação, SLA e evidência.
 
@@ -112,7 +112,7 @@ Escreva um fluxograma simples (papel ou draw.io) de admissão, movimentação e 
 
 ### Glossário do mercado (com termos em inglês)
 
-- [ ] Obrigatório.
+- [ ] Obrigatório. `f1-glossario`
 
 **Conceito.** As vagas misturam português e inglês. Termos-chave: provisioning/deprovisioning (provisionar/desprovisionar), entitlement (direito de acesso), access request, access review / recertification, birthright access (acesso padrão do cargo), orphan account (conta órfã), privileged account, break-glass (conta de emergência), IdP/SP, federation.
 

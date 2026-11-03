@@ -1,10 +1,10 @@
 # Fase 2 — Active Directory e LDAP
 
-- [ ] Fase não concluída
+- [ ] Fase não concluída (`f2`)
 
 Duração sugerida na trilha: **3–4 semanas**. Itens obrigatórios: **9**. Opcionais: **0**.
 
-Esta pasta começa sem evidência. O checklist abaixo sai da trilha de estudos e fica desmarcado até você fazer o item. Laboratório não é produção.
+Esta pasta começa sem evidência. O checklist abaixo sai da trilha de estudos e fica desmarcado até você fazer o item. Laboratório não é produção. O id entre crases na caixa é o mesmo de `curriculum/progress.yml` e de `docs/trilha-iam.html`.
 
 ## Objetivo
 
@@ -16,7 +16,7 @@ Depois do JML feito na interface, os modelos em PowerShell estão na fase 8: [sc
 
 ### Montar o lab: VirtualBox + Windows Server + domínio
 
-- [ ] Obrigatório. Tem prática de laboratório.
+- [ ] Obrigatório. Tem prática de laboratório. `f2-lab`
 
 **Conceito.** O Active Directory Domain Services (AD DS) é o diretório on-premises mais usado no Brasil. O **controlador de domínio (DC)** guarda usuários, grupos e computadores e autentica todo mundo (Kerberos). Ter um DC em casa é o lab mais valioso que existe para IAM.
 
@@ -38,7 +38,7 @@ Passo a passo de instalação na trilha interativa (`docs/trilha-iam.html`), gui
 
 ### Unidades Organizacionais (OUs) e delegação
 
-- [ ] Obrigatório. Tem prática de laboratório.
+- [ ] Obrigatório. Tem prática de laboratório. `f2-ou`
 
 **Conceito.** OUs são “pastas” do AD que organizam objetos e servem para aplicar GPOs e **delegar administração** (ex.: o suporte do RH pode resetar senha só dos usuários da OU RH). OU não dá permissão de acesso a arquivos: quem faz isso são os grupos.
 
@@ -56,7 +56,7 @@ Crie a estrutura `LABIAM > Usuarios > (TI, RH, Financeiro, Desligados)`, `Grupos
 
 ### Grupos: segurança x distribuição, escopos e AGDLP
 
-- [ ] Obrigatório. Tem prática de laboratório.
+- [ ] Obrigatório. Tem prática de laboratório. `f2-grupos`
 
 **Conceito.** Grupos de **segurança** dão permissão; de **distribuição** são só listas de e-mail. Escopos: Global (membros do próprio domínio), Domain Local (usados para dar permissão em recursos) e Universal (floresta). Boa prática clássica: **AGDLP**: contas em grupos Globais por função, que entram em grupos Domain Local de recurso, que recebem a permissão.
 
@@ -75,7 +75,7 @@ Crie a pasta compartilhada `\\DC01\Financeiro`; o grupo `DL-Financeiro-Leitura` 
 
 ### GPOs (Diretivas de Grupo)
 
-- [ ] Obrigatório. Tem prática de laboratório.
+- [ ] Obrigatório. Tem prática de laboratório. `f2-gpo`
 
 **Conceito.** GPO é um conjunto de configurações aplicado a usuários/computadores de uma OU (bloquear painel de controle, mapear unidade, papel de parede, política de auditoria). Ordem de aplicação: Local, Site, Domínio, OU (LSDOU); a última vence, salvo “Imposto/Enforced”.
 
@@ -93,7 +93,7 @@ Crie a GPO “Bloqueio-Painel-Controle” vinculada à OU Financeiro; no cliente
 
 ### Política de senha, bloqueio e FGPP
 
-- [ ] Obrigatório. Tem prática de laboratório.
+- [ ] Obrigatório. Tem prática de laboratório. `f2-senha`
 
 **Conceito.** A política de senha padrão do domínio fica na **Default Domain Policy** (tamanho, complexidade, histórico, bloqueio após X tentativas). Para regras diferentes por grupo (ex.: admins com 15+ caracteres) usa-se a **Política de Senha Refinada (FGPP)** pelo Centro Administrativo do AD.
 
@@ -112,7 +112,7 @@ Configure: mínimo de 12 caracteres e bloqueio após 5 tentativas no domínio; F
 
 ### JML completo no AD (a sua maior lacuna, agora na prática)
 
-- [ ] Obrigatório. Tem prática de laboratório.
+- [ ] Obrigatório. Tem prática de laboratório. `f2-jml`
 
 **Conceito.** Aqui você executa o ciclo inteiro: **admissão** (criar conta na OU certa com atributos, senha inicial com troca obrigatória e grupos do cargo), **movimentação** (remover os grupos antigos antes de adicionar os novos) e **desligamento** (desabilitar, remover grupos, mover para a OU Desligados, registrar data e chamado, excluir só depois do prazo de retenção).
 
@@ -132,7 +132,7 @@ Admita 3 pessoas (RH, Financeiro, TI), mova 1 do RH para o Financeiro e desligue
 
 ### LDAP na prática: DN, atributos e consultas
 
-- [ ] Obrigatório. Tem prática de laboratório.
+- [ ] Obrigatório. Tem prática de laboratório. `f2-ldap`
 
 **Conceito.** LDAP é o protocolo para consultar e alterar diretórios. Todo objeto tem um **DN** (ex.: `CN=Ana Teste,OU=RH,OU=Usuarios,DC=labiam,DC=local`) e atributos (`sAMAccountName`, `mail`, `memberOf`, `userAccountControl`). Aplicações usam LDAP/LDAPS (porta 389/636) para autenticar contra o AD.
 
@@ -151,7 +151,7 @@ No DC, abra `ldp.exe` > Conexão > Ligar (bind) > Exibir > Árvore. Depois, no P
 
 ### Kerberos e NTLM (o que acontece no logon)
 
-- [ ] Obrigatório. Tem prática de laboratório.
+- [ ] Obrigatório. Tem prática de laboratório. `f2-kerb`
 
 **Conceito.** No domínio, o logon usa **Kerberos**: o usuário recebe um TGT do KDC (no DC) e depois tickets de serviço (TGS) para cada recurso. O NTLM é o protocolo antigo, ainda usado como fallback. Do SOC você já conhece os ataques (Kerberoasting, pass-the-hash); aqui o foco é entender o funcionamento normal.
 
@@ -169,7 +169,7 @@ No PC01, rode `klist`, acesse `\\DC01\Financeiro` e rode `klist` de novo para ve
 
 ### Auditoria de identidade no AD (eventos que o IAM acompanha)
 
-- [ ] Obrigatório. Tem prática de laboratório.
+- [ ] Obrigatório. Tem prática de laboratório. `f2-audit`
 
 **Conceito.** IAM e SOC se encontram aqui. Eventos importantes: **4720** (usuário criado), **4722/4725** (habilitado/desabilitado), **4726** (excluído), **4728/4732/4756** (membro adicionado a grupo global/local/universal), **4740** (conta bloqueada), **4624/4625** (logon com sucesso/falha). Eles são a evidência de auditoria do JML.
 

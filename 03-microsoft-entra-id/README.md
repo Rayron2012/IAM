@@ -1,10 +1,10 @@
 # Fase 3 — Microsoft Entra ID
 
-- [ ] Fase não concluída
+- [ ] Fase não concluída (`f3`)
 
 Duração sugerida na trilha: **3 semanas**. Itens obrigatórios: **9**. Opcionais: **0**.
 
-Esta pasta começa sem evidência. O checklist abaixo sai da trilha de estudos e fica desmarcado até você fazer o item. Laboratório não é produção.
+Esta pasta começa sem evidência. O checklist abaixo sai da trilha de estudos e fica desmarcado até você fazer o item. Laboratório não é produção. O id entre crases na caixa é o mesmo de `curriculum/progress.yml` e de `docs/trilha-iam.html`.
 
 ## Objetivo
 
@@ -14,7 +14,7 @@ Levar o que você aprendeu no AD para a nuvem: usuários e grupos no Entra, MFA,
 
 ### Conseguir um tenant de estudo (sem usar o da empresa)
 
-- [ ] Obrigatório. Tem prática de laboratório.
+- [ ] Obrigatório. Tem prática de laboratório. `f3-tenant`
 
 **Conceito.** Tenant é a “instância” do Entra ID de uma organização. Para estudar você precisa do seu próprio. O plano **Free** não custa nada; P1 e P2 são pagos, mas têm avaliação temporária.
 
@@ -36,7 +36,7 @@ Passo a passo de instalação na trilha interativa (`docs/trilha-iam.html`), gui
 
 ### Usuários, grupos e funções administrativas no Entra
 
-- [ ] Obrigatório. Tem prática de laboratório.
+- [ ] Obrigatório. Tem prática de laboratório. `f3-users`
 
 **Conceito.** No Entra existem usuários membros e convidados (B2B), grupos de segurança e Microsoft 365, e **funções de diretório** (Administrador Global, Administrador de Usuários, Administrador de Suporte Técnico…). Menor privilégio aqui é não dar Administrador Global para quem só reseta senha.
 
@@ -55,7 +55,7 @@ Crie 6 usuários, 3 grupos de segurança e dê a um usuário a função “Admin
 
 ### MFA e Padrões de Segurança
 
-- [ ] Obrigatório. Tem prática de laboratório.
+- [ ] Obrigatório. Tem prática de laboratório. `f3-mfa`
 
 **Conceito.** Os **Padrões de Segurança** (security defaults) ligam o MFA para todos de graça, no plano Free. É o mínimo para qualquer tenant. O MFA “por usuário” é legado; o caminho moderno é Padrões de Segurança ou Acesso Condicional.
 
@@ -74,7 +74,7 @@ Ative os Padrões de Segurança e registre MFA em 2 usuários de teste. Veja o r
 
 ### Acesso Condicional (com avaliação P1/P2)
 
-- [ ] Obrigatório. Tem prática de laboratório.
+- [ ] Obrigatório. Tem prática de laboratório. `f3-ca`
 
 **Conceito.** Acesso Condicional são regras “**se** (usuário, app, local, dispositivo, risco) **então** (exigir MFA, bloquear, exigir dispositivo em conformidade)”. É o coração do Zero Trust no Microsoft 365. Exige licença P1; boas práticas: **modo Somente relatório** primeiro e **excluir a conta de emergência**.
 
@@ -94,7 +94,7 @@ Crie 2 políticas em Somente relatório: (1) exigir MFA para todos, exceto break
 
 ### SSO de aplicativo empresarial (SAML) no Entra
 
-- [ ] Obrigatório. Tem prática de laboratório.
+- [ ] Obrigatório. Tem prática de laboratório. `f3-sso`
 
 **Conceito.** No Entra, cada app integrado vira um **Aplicativo empresarial**. Com SSO SAML, o Entra é o IdP e o app é o SP: o usuário entra uma vez e acessa o app sem nova senha. A Microsoft tem um app de teste, o **Microsoft Entra SAML Toolkit**, feito para treinar isso.
 
@@ -114,7 +114,7 @@ Configure o SAML Toolkit, atribua só ao grupo `GG-Financeiro` e teste com um us
 
 ### Revisões de acesso (recertificação) no Entra
 
-- [ ] Obrigatório. Tem prática de laboratório.
+- [ ] Obrigatório. Tem prática de laboratório. `f3-reviews`
 
 **Conceito.** Revisão de acesso é pedir periodicamente ao gestor (ou ao próprio usuário) que confirme se cada pessoa ainda precisa daquele acesso; o que não for aprovado é removido. É o que as vagas chamam de **recertificação** e o que os auditores pedem como evidência. No Entra exige P2 / ID Governance.
 
@@ -133,7 +133,7 @@ Crie uma revisão do grupo `GG-Financeiro` com o admin como revisor, negue 1 pes
 
 ### PIM: acesso privilegiado just-in-time
 
-- [ ] Obrigatório. Tem prática de laboratório.
+- [ ] Obrigatório. Tem prática de laboratório. `f3-pim`
 
 **Conceito.** O **Privileged Identity Management** transforma funções de admin em “elegíveis”: a pessoa ativa a função só quando precisa, por algumas horas, com justificativa, MFA e, se quiser, aprovação. É PAM aplicado às funções da nuvem.
 
@@ -152,7 +152,7 @@ Torne um usuário **elegível** a Administrador de Usuários por no máximo 2 ho
 
 ### Identidade híbrida: AD + Entra (conceito)
 
-- [ ] Obrigatório.
+- [ ] Obrigatório. `f3-hybrid`
 
 **Conceito.** A maioria das empresas brasileiras tem AD on-premises sincronizado com o Entra pelo **Microsoft Entra Connect** (ou Cloud Sync). Métodos de autenticação: sincronização de hash de senha (PHS), autenticação de passagem (PTA) ou federação (ADFS). É fonte comum de chamados: “alterei no AD e não refletiu na nuvem”.
 
@@ -170,7 +170,7 @@ Desenhe o fluxo: usuário criado no AD → sincronização (ciclo de cerca de 30
 
 ### Logs de entrada e auditoria no Entra
 
-- [ ] Obrigatório. Tem prática de laboratório.
+- [ ] Obrigatório. Tem prática de laboratório. `f3-logs`
 
 **Conceito.** Os **logs de entrada** mostram cada login (sucesso, falha, MFA, política de Acesso Condicional aplicada). Os **logs de auditoria** mostram mudanças (usuário criado, grupo alterado). Você já usa isso no Sentinel; no IAM eles servem para troubleshooting e evidência.
 

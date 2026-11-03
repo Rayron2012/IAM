@@ -1,10 +1,10 @@
 # Fase 9 — Conformidade e processo
 
-- [ ] Fase não concluída
+- [ ] Fase não concluída (`f9`)
 
 Duração sugerida na trilha: **2–3 semanas**. Itens obrigatórios: **6**. Opcionais: **0**.
 
-Esta pasta começa sem evidência. O checklist abaixo sai da trilha de estudos e fica desmarcado até você fazer o item. Laboratório não é produção.
+Esta pasta começa sem evidência. O checklist abaixo sai da trilha de estudos e fica desmarcado até você fazer o item. Laboratório não é produção. O id entre crases na caixa é o mesmo de `curriculum/progress.yml` e de `docs/trilha-iam.html`.
 
 ## Objetivo
 
@@ -14,7 +14,7 @@ Falar a língua de auditoria e processo: os controles de acesso da ISO 27001/270
 
 ### ISO/IEC 27001 e 27002: controles de acesso
 
-- [ ] Obrigatório.
+- [ ] Obrigatório. `f9-iso`
 
 **Conceito.** A ISO 27001 define o sistema de gestão (SGSI), e o Anexo A (detalhado na 27002:2022) lista os controles. Os de IAM: **5.15** Controle de acesso, **5.16** Gestão de identidade, **5.17** Informações de autenticação, **5.18** Direitos de acesso (inclui revisão periódica), **8.2** Direitos de acesso privilegiado, **8.3** Restrição de acesso à informação e **8.5** Autenticação segura. As normas são **pagas** (ISO/ABNT); estude por resumos e pelos guias gratuitos do governo.
 
@@ -34,7 +34,7 @@ Tabela “Controle → O que exige → Evidência que eu mostraria → Qual lab 
 
 ### LGPD aplicada a acessos
 
-- [ ] Obrigatório.
+- [ ] Obrigatório. `f9-lgpd`
 
 **Conceito.** A LGPD (Lei 13.709/2018) exige medidas de segurança para proteger dados pessoais (art. 46). Em IAM isso significa menor privilégio sobre dados pessoais, rastreabilidade de quem acessou, remoção rápida de acessos de desligados e cuidado com dados de usuários nos próprios sistemas de IAM. A ANPD é o órgão fiscalizador.
 
@@ -54,7 +54,7 @@ Liste 5 controles de IAM que ajudam a cumprir o art. 46 e, para cada um, um exem
 
 ### SOX, ITGC e evidência de auditoria
 
-- [ ] Obrigatório.
+- [ ] Obrigatório. `f9-sox`
 
 **Conceito.** Empresas com ações nos EUA (e muitas multinacionais no Brasil) seguem a **SOX**; os auditores testam os **ITGCs** (controles gerais de TI), em que “gestão de acessos” é um pilar: admissão aprovada, desligamento no prazo, revisão periódica, acesso privilegiado controlado e segregação de funções. Evidência boa é **completa, datada, rastreável e não editável** (chamado + aprovação + log/print).
 
@@ -73,7 +73,7 @@ Monte um “pacote de evidência” de 1 desligamento: chamado, aprovação, pri
 
 ### NIST CSF 2.0 e CIS Controls v8
 
-- [ ] Obrigatório.
+- [ ] Obrigatório. `f9-nist-cis`
 
 **Conceito.** O **NIST CSF 2.0** organiza a segurança em funções (Governar, Identificar, Proteger, Detectar, Responder, Recuperar); IAM fica em **PR.AA** (Gestão de identidade, autenticação e controle de acesso). Os **CIS Controls v8** são práticos: **Controle 5** (gestão de contas) e **Controle 6** (gestão de controle de acesso). Ambos são gratuitos; o NIST CSF tem tradução oficial em português.
 
@@ -93,7 +93,7 @@ Mapeie as salvaguardas do CIS 5 e 6 para os seus labs (ex.: 5.3 desabilitar cont
 
 ### Zero Trust
 
-- [ ] Obrigatório.
+- [ ] Obrigatório. `f9-zt`
 
 **Conceito.** Zero Trust é “**nunca confie, sempre verifique**”: cada acesso é verificado explicitamente (identidade, dispositivo, contexto), com menor privilégio e presumindo violação. A identidade é o novo perímetro: MFA, Acesso Condicional, PIM e revisão de acessos são a base.
 
@@ -113,7 +113,7 @@ Escreva 5 frases “Antes (perímetro) → Agora (Zero Trust)” usando o que vo
 
 ### ITIL: requisição, incidente, mudança e SLA
 
-- [ ] Obrigatório.
+- [ ] Obrigatório. `f9-itil`
 
 **Conceito.** No IAM quase tudo é **requisição de serviço** (pedido de acesso), alguns são **incidentes** (login quebrado) e alterações de configuração são **mudanças** (GMUD, com aprovação e janela). SLA é o prazo acordado; o IAM é medido por ele. Você já usa GLPI, OTRS e Jira: agora é organizar o vocabulário.
 

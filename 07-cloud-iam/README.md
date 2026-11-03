@@ -1,10 +1,10 @@
 # Fase 7 — IAM em nuvem
 
-- [ ] Fase não concluída
+- [ ] Fase não concluída (`f7`)
 
 Duração sugerida na trilha: **2 semanas**. Itens obrigatórios: **4**. Opcionais: **2**.
 
-Esta pasta começa sem evidência. O checklist abaixo sai da trilha de estudos e fica desmarcado até você fazer o item. Laboratório não é produção.
+Esta pasta começa sem evidência. O checklist abaixo sai da trilha de estudos e fica desmarcado até você fazer o item. Laboratório não é produção. O id entre crases na caixa é o mesmo de `curriculum/progress.yml` e de `docs/trilha-iam.html`.
 
 ## Objetivo
 
@@ -16,7 +16,7 @@ Os JSON de menor privilégio estão em [aws/README.md](aws/README.md). São exem
 
 ### Conta AWS segura e sem custo
 
-- [ ] Obrigatório. Tem prática de laboratório.
+- [ ] Obrigatório. Tem prática de laboratório. `f7-aws-conta`
 
 **Conceito.** A conta AWS tem um **usuário raiz** com poder total, que não deve ser usado no dia a dia. O primeiro trabalho de IAM em qualquer conta é: MFA no root, orçamento com alerta e um usuário admin separado.
 
@@ -38,7 +38,7 @@ Passo a passo de instalação na trilha interativa (`docs/trilha-iam.html`), gui
 
 ### Usuários, grupos e políticas (JSON)
 
-- [ ] Obrigatório. Tem prática de laboratório.
+- [ ] Obrigatório. Tem prática de laboratório. `f7-aws-iam`
 
 **Conceito.** Na AWS, o acesso é dado por **políticas JSON** com `Effect`, `Action`, `Resource` e `Condition`. Regra de ouro: um **Deny** explícito sempre vence; o que não está permitido está negado. Políticas gerenciadas pela AWS são práticas, mas as próprias (customer managed) permitem menor privilégio.
 
@@ -58,7 +58,7 @@ Crie o grupo `Auditores` (ReadOnlyAccess), a usuária `ana.auditora` e uma polí
 
 ### Roles (funções) e acesso temporário
 
-- [ ] Obrigatório. Tem prática de laboratório.
+- [ ] Obrigatório. Tem prática de laboratório. `f7-aws-roles`
 
 **Conceito.** Uma **role** não tem senha: ela é **assumida** e gera credenciais temporárias. É o jeito certo de dar acesso a serviços (EC2, Lambda), a outras contas e a admins (troca de função). Tem 2 partes: a **política de confiança** (quem pode assumir) e a **política de permissões** (o que pode fazer).
 
@@ -77,7 +77,7 @@ Crie a role `LeituraFinanceiro` que a `ana.auditora` pode assumir, use *Trocar f
 
 ### Simulador de políticas e Access Analyzer
 
-- [ ] Obrigatório. Tem prática de laboratório.
+- [ ] Obrigatório. Tem prática de laboratório. `f7-aws-sim`
 
 **Conceito.** O **simulador de políticas** testa “esse usuário pode fazer essa ação?” sem executar nada. O **IAM Access Analyzer** encontra recursos compartilhados com fora da conta e valida políticas. São as ferramentas de auditoria de permissões na AWS.
 
@@ -97,7 +97,7 @@ No simulador, prove que a `ana.auditora` pode `s3:ListAllMyBuckets` e não pode 
 
 ### IAM Identity Center (SSO para várias contas AWS)
 
-- [ ] Opcional. Não conta para o marco da fase. Tem prática de laboratório.
+- [ ] Opcional. Não conta para o marco da fase. Tem prática de laboratório. `f7-identity-center`
 
 **Conceito.** O **IAM Identity Center** é o SSO da AWS: usuários (ou um IdP externo como o Entra) recebem **conjuntos de permissões** por conta. É o modelo recomendado pela AWS no lugar de usuários IAM com senha. Ele é gratuito.
 
@@ -116,7 +116,7 @@ Crie o conjunto de permissões `SomenteLeitura` e atribua a um usuário do Ident
 
 ### RBAC do Azure (escopos e funções)
 
-- [ ] Opcional. Não conta para o marco da fase. Tem prática de laboratório.
+- [ ] Opcional. Não conta para o marco da fase. Tem prática de laboratório. `f7-azure-rbac`
 
 **Conceito.** No Azure, permissões sobre recursos são dadas por **atribuição de função** = quem (usuário/grupo/identidade gerenciada) + função (Leitor, Colaborador, Proprietário…) + **escopo** (grupo de gerenciamento, assinatura, grupo de recursos, recurso). Não confunda com as funções de diretório do Entra.
 

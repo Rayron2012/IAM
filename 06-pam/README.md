@@ -1,10 +1,10 @@
 # Fase 6 — Acesso privilegiado (PAM)
 
-- [ ] Fase não concluída
+- [ ] Fase não concluída (`f6`)
 
 Duração sugerida na trilha: **2–3 semanas**. Itens obrigatórios: **5**. Opcionais: **0**.
 
-Esta pasta começa sem evidência. O checklist abaixo sai da trilha de estudos e fica desmarcado até você fazer o item. Laboratório não é produção.
+Esta pasta começa sem evidência. O checklist abaixo sai da trilha de estudos e fica desmarcado até você fazer o item. Laboratório não é produção. O id entre crases na caixa é o mesmo de `curriculum/progress.yml` e de `docs/trilha-iam.html`.
 
 ## Objetivo
 
@@ -14,7 +14,7 @@ Entender e praticar como empresas protegem contas de administrador e de serviço
 
 ### Conceitos de PAM: cofre, rotação, sessão, JIT
 
-- [ ] Obrigatório.
+- [ ] Obrigatório. `f6-conceitos`
 
 **Conceito.** O PAM guarda senhas privilegiadas num **cofre** (vault); o usuário não conhece a senha: ele faz **check-out**, usa e devolve. A ferramenta **rotaciona** a senha automaticamente, **grava a sessão** (vídeo e comandos), pode exigir **aprovação dupla** (dual control) e liberar acesso **just-in-time**. “Onboarding de conta” é colocar uma conta privilegiada sob gestão do cofre.
 
@@ -33,7 +33,7 @@ Monte um quadro “Risco → Controle PAM” com 6 linhas (ex.: senha de admin c
 
 ### Contas de serviço, LAPS e conta de emergência
 
-- [ ] Obrigatório. Tem prática de laboratório.
+- [ ] Obrigatório. Tem prática de laboratório. `f6-contas-servico`
 
 **Conceito.** **Contas de serviço** rodam aplicações e costumam ter senha que nunca expira e privilégio demais: no AD, o ideal é usar **gMSA** (senha gerenciada automaticamente). O **Windows LAPS** rotaciona a senha do administrador local de cada máquina. A **conta de emergência (break-glass)** fica fora do MFA/Acesso Condicional normal, com senha guardada offline e alerta em qualquer uso.
 
@@ -53,7 +53,7 @@ Crie uma gMSA no lab (`Add-KdsRootKey`, `New-ADServiceAccount`) e ative o Window
 
 ### Treinamentos gratuitos CyberArk
 
-- [ ] Obrigatório.
+- [ ] Obrigatório. `f6-cyberark`
 
 **Conceito.** A CyberArk é líder em PAM e aparece com frequência em vagas de PAM. Componentes que caem em entrevista: **Vault**, **PVWA** (portal), **CPM** (rotação), **PSM** (sessão isolada e gravada). O produto não é baixável; os cursos introdutórios e de usuário final são gratuitos.
 
@@ -74,7 +74,7 @@ Passo a passo de instalação na trilha interativa (`docs/trilha-iam.html`), gui
 
 ### Lab PAM open source: Teleport
 
-- [ ] Obrigatório. Tem prática de laboratório.
+- [ ] Obrigatório. Tem prática de laboratório. `f6-lab-teleport`
 
 **Conceito.** O Teleport Community é gratuito e mostra na prática os conceitos de PAM: acesso via proxy com MFA, papéis (RBAC), **gravação de sessão** e **log de auditoria**. Os nomes mudam de ferramenta para ferramenta, mas os conceitos são os mesmos do CyberArk ou do Senhasegura.
 
@@ -96,7 +96,7 @@ Passo a passo de instalação na trilha interativa (`docs/trilha-iam.html`), gui
 
 ### Ferramentas de PAM do mercado BR: Segura (Senhasegura), BeyondTrust, Delinea
 
-- [ ] Obrigatório.
+- [ ] Obrigatório. `f6-mercado`
 
 **Conceito.** A **Senhasegura** (hoje com a marca **Segura**) é brasileira e muito comum aqui. BeyondTrust e Delinea (antiga Thycotic/Centrify) completam a lista. Todas fazem cofre, rotação, sessão e JIT. Em entrevista, mostre que você entende os conceitos e consegue aprender qualquer uma.
 

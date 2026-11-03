@@ -1,10 +1,10 @@
 # Fase 8 — Automação
 
-- [ ] Fase não concluída
+- [ ] Fase não concluída (`f8`)
 
 Duração sugerida na trilha: **3 semanas**. Itens obrigatórios: **6**. Opcionais: **1**.
 
-Esta pasta começa sem evidência. O checklist abaixo sai da trilha de estudos e fica desmarcado até você fazer o item. Laboratório não é produção.
+Esta pasta começa sem evidência. O checklist abaixo sai da trilha de estudos e fica desmarcado até você fazer o item. Laboratório não é produção. O id entre crases na caixa é o mesmo de `curriculum/progress.yml` e de `docs/trilha-iam.html`.
 
 ## Objetivo
 
@@ -16,7 +16,7 @@ Use os modelos desta pasta: [powershell/README.md](powershell/README.md) e [sql/
 
 ### PowerShell do zero
 
-- [ ] Obrigatório. Tem prática de laboratório.
+- [ ] Obrigatório. Tem prática de laboratório. `f8-ps-basics`
 
 **Conceito.** PowerShell trabalha com **objetos**, não texto: `Get-` lê, `Set-` altera, `New-` cria, `Remove-` apaga; o pipe `|` passa objetos adiante; `Where-Object` filtra; `Select-Object` escolhe colunas; `Export-Csv` gera relatório. Para IAM, é a linguagem nº 1 em ambiente Microsoft.
 
@@ -35,7 +35,7 @@ Escreva comandos que: listam serviços parados; listam usuários desabilitados d
 
 ### JML em massa no AD a partir de CSV
 
-- [ ] Obrigatório. Tem prática de laboratório.
+- [ ] Obrigatório. Tem prática de laboratório. `f8-ps-ad`
 
 **Conceito.** Admissão e desligamento em massa são tarefas comuns: o RH manda uma planilha e o IAM processa. Um script bom **valida** os dados, tem modo de **teste** (`-WhatIf`), registra **log** e nunca tem senha escrita no código.
 
@@ -66,7 +66,7 @@ Depois, faça o script de desligamento (desabilitar, tirar grupos, mover OU, gra
 
 ### Microsoft Graph PowerShell (Entra ID)
 
-- [ ] Obrigatório. Tem prática de laboratório.
+- [ ] Obrigatório. Tem prática de laboratório. `f8-graph`
 
 **Conceito.** O **Microsoft Graph** é a API do Microsoft 365/Entra. O módulo **Microsoft Graph PowerShell** substituiu os antigos módulos AzureAD e MSOnline (descontinuados). Você conecta pedindo só os **escopos** necessários (menor privilégio também no script).
 
@@ -93,7 +93,7 @@ Gere também a lista de membros do grupo `GG-Financeiro`.
 
 ### APIs REST na prática (Keycloak e Graph)
 
-- [ ] Obrigatório. Tem prática de laboratório.
+- [ ] Obrigatório. Tem prática de laboratório. `f8-rest`
 
 **Conceito.** Quase toda integração de IAM é uma API REST: método (GET, POST, PUT, PATCH, DELETE), URL, cabeçalhos (`Authorization: Bearer <token>`), corpo JSON e código de resposta (200, 201, 401 não autenticado, 403 sem permissão, 404). Saber ler isso resolve metade dos chamados de integração.
 
@@ -122,7 +122,7 @@ Depois crie um usuário com POST e desative com PUT (`"enabled": false`).
 
 ### SQL para auditoria de permissões
 
-- [ ] Obrigatório. Tem prática de laboratório.
+- [ ] Obrigatório. Tem prática de laboratório. `f8-sql`
 
 **Conceito.** Você já sabe SQL: agora aplique a IAM. Consultas típicas: desligados com conta ativa, contas órfãs, quem tem acesso privilegiado, conflitos de SoD e contas sem login há 90 dias. Bancos também têm permissões próprias (logins, usuários, roles, GRANT/REVOKE) que entram em auditoria.
 
@@ -155,7 +155,7 @@ JOIN acessos a2 ON a2.perfil=s.perfil_b AND a2.login=a1.login;
 
 ### Python para cruzar listas (opcional)
 
-- [ ] Opcional. Não conta para o marco da fase. Tem prática de laboratório.
+- [ ] Opcional. Não conta para o marco da fase. Tem prática de laboratório. `f8-python`
 
 **Conceito.** Com Python básico + a biblioteca `csv` (ou pandas) você automatiza a reconciliação RH x AD x Entra e gera relatórios. É um bom diferencial, mas o PowerShell vem antes em ambiente Microsoft.
 
@@ -174,7 +174,7 @@ Script que lê `rh.csv` e `contas.csv` e gera `achados.csv` com órfãs e deslig
 
 ### IA como assistente de automação (com segurança)
 
-- [ ] Obrigatório.
+- [ ] Obrigatório. `f8-ia`
 
 **Conceito.** Há vagas que já pedem “automação assistida por IA”. Uso bom: pedir um rascunho de script, explicar um erro, revisar uma política JSON, gerar dados fictícios. Uso proibido: colar dados reais, logs da empresa, tokens ou senhas. Você sempre **entende e testa** o que a IA gerou antes de rodar, em lab e com `-WhatIf`.
 
